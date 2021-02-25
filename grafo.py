@@ -118,3 +118,26 @@ def gerador_de_dist_pred(vertices):
         pred.append(None)
 
     return dist,pred
+
+#Recuperar caminhos minimos 
+def recuperar_caminho_matriz(origem,destino,lista_pred):
+    caminho = [destino]
+    aux = destino
+    
+    while aux != origem:
+        caminho.append(aux)
+        aux = pred[origem][aux]
+    
+    caminho.reverse()
+    return caminho
+
+def recuperar_caminho_lista(origem,destino,lista_pred):
+    caminho = []
+    aux = destino
+    
+    while aux != destino:
+        caminho.append(aux)
+        aux = pred[aux]
+    caminho.append(origem)
+    caminho.reverse()
+
