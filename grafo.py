@@ -173,6 +173,5 @@ def recuperar_caminho_lista(origem,destino,lista_pred):
             caminho.append(aux)
 
         caminho.reverse()
-
         return caminho
 
